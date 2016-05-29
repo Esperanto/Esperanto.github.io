@@ -1,0 +1,67 @@
+---
+---
+
+@import url(https://fonts.googleapis.com/css?family=Arvo:400,700|Noto+Sans:400,400italic,700);
+
+{% include reset.css %}
+
+body {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+@mixin stroke($width, $color) {
+    $width: $width + 0;
+    $shadow: 0 0 0 transparent;
+    $i: 0;
+    $w: 1;
+
+    @while ($i < $width) {
+        $i: $i + 1;
+        $j: 0;
+        $w: $w + 2;
+
+        @for $r from 1 through $w {
+            @for $c from 1 through $w {
+                $x: $c - ceil($w / 2);
+                $y: $r - ceil($w / 2);
+
+                $shadow: #{$shadow}, #{$x}px #{$y}px 0 $color;
+            }
+        }
+    }
+
+    text-shadow: $shadow;
+}
+
+div#header {
+	width: 100%;
+	height: 45vh;
+	background: url(/images/wood-painted-star-green.jpg);
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	padding-top: 17vh;
+	color: #fff;
+	position: absolute;
+	
+	
+	h1 {
+		font-size: 8vh;
+		font-weight: bold;
+		@include stroke(3, #000);
+	}
+	
+	p {
+		position: absolute;
+		bottom: 15px;
+		width: 100%;
+		text-align: center;
+		font-size: 20px;
+		@include stroke(1, #000);
+	}
+}
+
+
+
+
+
