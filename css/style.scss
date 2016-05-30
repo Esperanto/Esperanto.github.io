@@ -1,6 +1,8 @@
 ---
 ---
 
+$headerheight: 45vh;
+
 @import url(https://fonts.googleapis.com/css?family=Arvo:400,700|Noto+Sans:400,400italic,700);
 
 {% include reset.css %}
@@ -35,14 +37,14 @@ body {
 
 div#header {
 	width: 100%;
-	height: 45vh;
+	height: $headerheight;
 	background: url(/images/wood-painted-star-green.jpg);
 	background-size: cover;
 	background-position: center;
 	text-align: center;
 	padding-top: 17vh;
 	color: #fff;
-	position: absolute;
+	position: relative;
 	
 	
 	h1 {
@@ -60,6 +62,70 @@ div#header {
 		@include stroke(1, #000);
 	}
 }
+
+div#content {
+	position: relative;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 20px;
+	line-height: 130%;
+	font-size: 15px;
+	
+	h2 {
+		font-weight: bold;
+		font-size: 28px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+}
+
+div#cardwrap {
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+a.card {
+	color: #000;
+}
+
+div.card {
+	display: inline-block;
+	width: 46%;
+	text-align: left;
+	background-color: #ced55c;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 6px;
+	box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+	
+	h3 {
+		font-weight: bold;
+		font-size: 22px;
+		margin-bottom: 5px;
+	}
+	
+	&:hover {
+		background-color: darken(#ced55c, 15%);
+	}
+}
+
+div#footer {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	background-color: #333;
+	color: #ccc;
+	padding: 10px;
+	font-size: 14px;
+	
+	a {
+		color: inherit;
+		text-decoration: underline;
+	}
+}
+
+strong { font-weight: bold; }
 
 
 
