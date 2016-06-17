@@ -9,6 +9,8 @@ $headerheight: 45vh;
 
 body {
 	font-family: 'Noto Sans', sans-serif;
+	background-color: #333;
+	color: #fff;
 }
 
 @mixin stroke($width, $color) {
@@ -38,7 +40,7 @@ body {
 div#header {
 	width: 100%;
 	height: $headerheight;
-	background: url(/images/wood-painted-star-green.jpg);
+	background: url(/images/circuit-board.jpg);
 	background-size: cover;
 	background-position: center;
 	text-align: center;
@@ -48,7 +50,7 @@ div#header {
 	
 	
 	h1 {
-		font-size: 8vh;
+		font-size: 10vh;
 		font-weight: bold;
 		@include stroke(3, #000);
 	}
@@ -59,6 +61,7 @@ div#header {
 		width: 100%;
 		text-align: center;
 		font-size: 20px;
+		font-weight: bold;
 		@include stroke(1, #000);
 	}
 }
@@ -68,7 +71,7 @@ div#content {
 	width: 90%;
 	margin-left: 5%;
 	margin-top: 20px;
-	line-height: 130%;
+	line-height: 135%;
 	font-size: 15px;
 	
 	h2 {
@@ -83,6 +86,12 @@ div#cardwrap {
 	width: 100%;
 	text-align: center;
 	margin-top: 10px;
+}
+
+a {
+	text-decoration: none;
+	&:link, &:visited { color: lighten(#00aa00, 10%); }
+	&:hover, &:active { color: #00aa00; }
 }
 
 a.card {
@@ -114,7 +123,7 @@ div#footer {
 	margin-top: 20px;
 	width: 100%;
 	text-align: center;
-	background-color: #333;
+	background-color: #111;
 	color: #ccc;
 	padding: 10px;
 	font-size: 14px;
