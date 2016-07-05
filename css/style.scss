@@ -68,24 +68,18 @@ div#header {
 
 div#content {
 	position: relative;
-	width: 90%;
-	margin-left: 5%;
+	width: 850px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 20px;
 	line-height: 135%;
-	font-size: 15px;
+	font-size: 16px;
 	
 	h2 {
 		font-weight: bold;
 		font-size: 28px;
-		margin-top: 20px;
 		margin-bottom: 10px;
 	}
-}
-
-div#cardwrap {
-	width: 100%;
-	text-align: center;
-	margin-top: 10px;
 }
 
 a {
@@ -94,28 +88,26 @@ a {
 	&:hover, &:active { color: #00aa00; }
 }
 
-a.card {
-	color: #000;
+div.itemwrap {
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	border-bottom: 1px dotted;
 }
 
-div.card {
-	display: inline-block;
-	width: 46%;
-	text-align: left;
-	background-color: #ced55c;
-	padding: 10px;
-	margin: 10px;
-	border-radius: 6px;
-	box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 0.75);
+div.item {
+	display: block;
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px dotted;
 	
 	h3 {
 		font-weight: bold;
 		font-size: 22px;
 		margin-bottom: 5px;
-	}
-	
-	&:hover {
-		background-color: darken(#ced55c, 15%);
+		
+		a { color: inherit; }
 	}
 }
 
